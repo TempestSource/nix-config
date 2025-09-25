@@ -8,6 +8,7 @@
 			set tabstop=4
 			set shiftwidth=4
 			set number relativenumber
+			highlight Normal ctermbg=NONE guibg=NONE
 		'';
 	};
 }
