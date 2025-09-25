@@ -18,10 +18,13 @@
 			home.stateVersion = "25.05";
 			programs.home-manager.enable = true;
 			imports =
-				if ( hostType == "desktop" ) then 
-					[ ./home/desktop ./home/core ]
+				if ( hostType == "dev" ) then 
+					[ ./home/dev ./home/desktop ./home/core ]
 				else
-					[ ./core ];
+					if (hostType == "desktop" ) then
+						[ ./home/desktop ./home/core ]
+					else
+						[ ./core ];
 		};
 	};
 }

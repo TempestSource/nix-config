@@ -5,14 +5,14 @@
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
 		home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+			url = "github:nix-community/home-manager";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
 	outputs = { self, nixpkgs, ... }@inputs: let
 			userName = "lain";
-			hostType = "desktop";
+			hostType = "dev";
 		in {
 			nixosConfigurations = {
 				oblivion = nixpkgs.lib.nixosSystem {

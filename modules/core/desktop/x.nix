@@ -1,12 +1,13 @@
 { ... }: {
 	services = {
+		desktopManager.plasma6.enable = true;
 		xserver = {
 			enable = true;
-			desktopManager.cinnamon.enable = true;
 		};
 
 		displayManager = {
-			gdm.enable = true;
+			sddm.enable = true;
+			sddm.wayland.enable = true;
 		};
 	};
 }
