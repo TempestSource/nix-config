@@ -8,9 +8,6 @@
 
 			set termguicolors
             colorscheme catppuccin_mocha
-
-            hi Normal guibg=NONE
-            hi Normal guibg=NONE
 		'';
         plugins = with pkgs.vimPlugins; [
 			nerdtree

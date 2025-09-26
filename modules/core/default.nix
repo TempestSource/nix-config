@@ -1,9 +1,11 @@
 { hostType, pkgs, ... }: {
 	imports =
-		if ( hostType == "desktop" || hostType == "dev" ) then
-			[ ./desktop ../user.nix ]
-			else
-				[ ../user.nix ];
+		if ( hostType == "dev" ) then
+			[ ./dev ./desktop ../user.nix ]
+            else if ( hostType == "desktop" || hostType == "dev" ) then
+                [ ./desktop ../user.nix ]
+                else
+                    [ ../user.nix ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
