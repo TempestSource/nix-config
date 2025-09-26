@@ -21,6 +21,12 @@
 					];
 					specialArgs = { inherit self inputs userName hostType ; };
 				};
+				nixtest = nixpkgs.lib.nixosSystem {
+					modules = [
+						./hosts/nixtest
+					];
+					specialArgs = { inherit self inputs userName hostType ; };
+				};
 			};	
 	};
 }
