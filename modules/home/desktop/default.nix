@@ -4,6 +4,7 @@
 		./terminal.nix
 		./music.nix
 		./social.nix
+        ./theme.nix
 	];
 
 	home.packages = with pkgs; [

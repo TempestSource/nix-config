@@ -12,7 +12,6 @@
 	};
 
   environment.systemPackages = with pkgs; [
-      catppuccin-kde
       (catppuccin-sddm.override {
         flavor = "mocha";
         accent = "mauve";

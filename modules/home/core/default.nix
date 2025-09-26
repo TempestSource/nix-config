@@ -8,5 +8,6 @@
 		tree
 		htop
 		neofetch
+        bat
 	];
 }

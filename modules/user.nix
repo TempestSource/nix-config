@@ -1,6 +1,7 @@
 { inputs, hostType, userName, ... }: {
 	imports = [ 
 		inputs.home-manager.nixosModules.home-manager 
+        inputs.catppuccin.nixosModules.catppuccin
 	];
 
 	users.users.${userName} = {
@@ -19,10 +20,10 @@
 			programs.home-manager.enable = true;
 			imports =
 				if ( hostType == "dev" ) then 
-					[ ./home/dev ./home/desktop ./home/core ]
+					[ ./home/dev ./home/desktop ./home/core inputs.catppuccin.homeModules.catppuccin ]
 				else
 					if (hostType == "desktop" ) then
-						[ ./home/desktop ./home/core ]
+						[ ./home/desktop ./home/core inputs.catppuccin.homeModules.catppuccin ]
 					else
 						[ ./core ];
 		};
