@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 	imports = [
-		./java.nix
+		./langs.nix
 		./editor.nix
 	];
 }
