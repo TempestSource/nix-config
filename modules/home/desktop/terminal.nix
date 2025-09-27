@@ -5,7 +5,7 @@
 
 	programs.kitty = {
 		enable = true;
-		font.size = 20;
+		font.size = 24;
 		font.name = "JetBrains Mono";
 		extraConfig = ''
 			dynamic_background_opacity yes

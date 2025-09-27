@@ -1,12 +1,15 @@
-{ inputs, hostType, userName, ... }: {
+{ inputs, pkgs, hostType, userName, ... }: {
 	imports = [ 
 		inputs.home-manager.nixosModules.home-manager 
         inputs.catppuccin.nixosModules.catppuccin
 	];
 
+    programs.zsh.enable = true;
+
 	users.users.${userName} = {
 		isNormalUser = true;
 		extraGroups = [ "wheel" ];
+        shell = pkgs.zsh;
 	};
 	
 	home-manager = {

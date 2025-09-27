@@ -1,0 +1,44 @@
+{ pkgs, ... }: {
+  home.file.".p10k.zsh".source = ./p10k.zsh;
+
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    plugins = [
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+    ];
+
+    initContent = ''
+      source ~/.p10k.zsh
+    '';
+
+    shellAliases = {
+      # nix
+      nixr = "sudo nixos-rebuild switch";
+
+      # eza
+      l = "eza --icons  -a --group-directories-first -1";
+      ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
+      tree = "eza --icons --tree --group-directories-first";
+
+      # Programs
+      v = "vim";
+      vi = "vim";
+
+      # Git
+      gs = "git status";
+      ga = "git add";
+      gr = "git remove";
+      gc = "git commit -m";
+      gp = "git push";
+
+      cat = "bat";
+    };
+  };
+}
