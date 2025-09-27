@@ -4,17 +4,17 @@
   imports =
     [
       ./hardware-configuration.nix
-			../../modules/core
+      ../../modules/core
     ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "oblivion";
+    networking.hostName = "oblivion";
 
-  time.timeZone = "US/Central";
+    time.timeZone = "US/Central";
 
-  system.stateVersion = "25.05";
+    system.stateVersion = "25.05";
 
-}
+  }
 

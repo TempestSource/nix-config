@@ -1,19 +1,20 @@
 { inputs, pkgs, ... }: {
-	programs.vim = {
-		enable = true;
-		extraConfig = ''
-			set tabstop=4
-			set shiftwidth=4
-			set number relativenumber
+  programs.vim = {
+    enable = true;
+    extraConfig = ''
+            set tabstop=4
+            set shiftwidth=4
+            set number relativenumber
 
-			set termguicolors
+            set termguicolors
             colorscheme catppuccin_mocha
-		'';
-        plugins = with pkgs.vimPlugins; [
-			nerdtree
-			catppuccin-vim
-            rainbow_parentheses
-            auto-pairs
-        ];
-	};
+    '';
+    plugins = with pkgs.vimPlugins; [
+      nerdtree
+      catppuccin-vim
+      rainbow_parentheses
+      auto-pairs
+      vim-closetag
+    ];
+  };
 }

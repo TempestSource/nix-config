@@ -6,17 +6,17 @@
   imports =
     [ 
       ./hardware-configuration.nix
-	../../modules/core
+      ../../modules/core
     ];
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+    boot.loader.grub.enable = true;
+    boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
-  networking.hostName = "nixtest"; # Define your hostname.
+    networking.hostName = "nixtest"; # Define your hostname.
 
-  time.timeZone = "US/Central";
+    time.timeZone = "US/Central";
 
-  system.stateVersion = "25.05"; # Did you read the comment?
+    system.stateVersion = "25.05"; # Did you read the comment?
 
-}
+  }
 

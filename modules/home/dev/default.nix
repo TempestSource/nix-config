@@ -1,7 +1,7 @@
 { pkgs, ... }: {
-	imports = [
-		./langs.nix
-		./editor.nix
-        ./nettools.nix
-	];
+  imports = [
+    ./langs.nix
+    ./editor.nix
+    ./nettools.nix
+  ];
 }

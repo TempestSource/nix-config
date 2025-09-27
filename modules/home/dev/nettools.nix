@@ -1,8 +1,8 @@
 { pkgs, ... }: {
-    home.packages = with pkgs; [
-      nmap
-      wireshark
-      remmina
-      filezilla
-    ];
+  home.packages = with pkgs; [
+    nmap
+    wireshark
+    remmina
+    filezilla
+  ];
 }

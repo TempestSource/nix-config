@@ -1,15 +1,15 @@
 { pkgs, ... }: {
-	imports = [
-		./git.nix
-        ./shell.nix
-	];
+  imports = [
+    ./git.nix
+    ./shell.nix
+  ];
 
-	home.packages = with pkgs; [
-		ranger
-		tree
-		htop
-		neofetch
-        bat
-        eza
-	];
+  home.packages = with pkgs; [
+    ranger
+    tree
+    htop
+    neofetch
+    bat
+    eza
+  ];
 }

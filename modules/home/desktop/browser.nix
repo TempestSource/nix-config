@@ -1,9 +1,9 @@
 { pkgs, ... }: {
-	programs.firefox = {
-		enable = true;
-	};
+  programs.firefox = {
+    enable = true;
+  };
 
-	# programs.qutebrowser = {
-	# 	enable = true;
-	# };
-}
+    # programs.qutebrowser = {
+    # 	enable = true;
+    # };
+  }

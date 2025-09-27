@@ -1,27 +1,27 @@
 { hostType, pkgs, ... }: {
-	imports =
-		if ( hostType == "dev" ) then
-			[ ./dev ./desktop ../user.nix ]
-            else if ( hostType == "desktop" || hostType == "dev" ) then
-                [ ./desktop ../user.nix ]
-                else
-                    [ ../user.nix ];
+  imports =
+    if ( hostType == "dev" ) then
+    [ ./dev ./desktop ../user.nix ]
+    else if ( hostType == "desktop" || hostType == "dev" ) then
+    [ ./desktop ../user.nix ]
+    else
+    [ ../user.nix ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-	networking = {
-		networkmanager.enable = true;
-		firewall.allowedTCPPorts = [ 22 ];
-		# firewall.allowedUDPPorts = [ ... ];
-	};
+    networking = {
+      networkmanager.enable = true;
+      firewall.allowedTCPPorts = [ 22 ];
+        # firewall.allowedUDPPorts = [ ... ];
+      };
 
-	services = {
-		openssh.enable = true;
-	};
+      services = {
+        openssh.enable = true;
+      };
 
-  environment.systemPackages = with pkgs; [
-    vim 
-    wget
-    git
-  ];
-}
+      environment.systemPackages = with pkgs; [
+        vim 
+        wget
+        git
+      ];
+    }

@@ -1,8 +1,8 @@
 { ... }: {
-	imports = [
-		./pipewire.nix
-		./de.nix
-	];
+  imports = [
+    ./pipewire.nix
+    ./de.nix
+  ];
 
-	services.printing.enable = true;
+  services.printing.enable = true;
 }
