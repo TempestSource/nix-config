@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     dmidecode
     libreoffice-qt-fresh
+    wl-clipboard
   ];
 
 }
