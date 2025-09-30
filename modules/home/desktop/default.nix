@@ -5,6 +5,7 @@
     ./music.nix
     ./social.nix
     ./theme.nix
+    ./pass.nix
   ];
 
   home.packages = with pkgs; [
