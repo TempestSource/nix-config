@@ -19,6 +19,11 @@
     '';
 
     shellAliases = {
+      # spotify
+      sp = "spotify_player";
+      spd = "spotify_player -d";
+      spt = "spotify_player playback play-pause";
+
       # nix
       nixr = "sudo nixos-rebuild switch";
 
