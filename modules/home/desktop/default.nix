@@ -12,6 +12,7 @@
     dmidecode
     libreoffice-qt-fresh
     wl-clipboard
+    mpv
   ];
 
 }

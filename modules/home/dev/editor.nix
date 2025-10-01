@@ -8,6 +8,11 @@
 
             set termguicolors
             colorscheme catppuccin_mocha
+
+            let mapleader = " "
+            nnoremap <leader>f :Files
+            nnoremap <leader>t :NERDTree
+            nnoremap <leader>l :Lines
     '';
     plugins = with pkgs.vimPlugins; [
       nerdtree
@@ -15,6 +20,7 @@
       rainbow_parentheses
       auto-pairs
       vim-closetag
+      fzf-vim
     ];
   };
 }

@@ -10,6 +10,7 @@
     htop
     neofetch
     bat
+    bc
     eza
   ];
 }
