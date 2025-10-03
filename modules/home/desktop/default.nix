@@ -6,13 +6,17 @@
     ./social.nix
     ./theme.nix
     ./pass.nix
+    ./office.nix
+    ./player.nix
+    ./media.nix
+    ./jp.nix
   ];
 
   home.packages = with pkgs; [
     dmidecode
-    libreoffice-qt-fresh
     wl-clipboard
-    mpv
+    ffmpeg
+    imagemagick
   ];
 
 }

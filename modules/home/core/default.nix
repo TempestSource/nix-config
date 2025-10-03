@@ -12,5 +12,6 @@
     bat
     bc
     eza
+    fzf
   ];
 }
