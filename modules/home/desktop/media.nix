@@ -3,5 +3,6 @@
     gimp
     audacity
     krita
+    pastel
   ];
 }

@@ -17,6 +17,9 @@
     wl-clipboard
     ffmpeg
     imagemagick
+    caligula
+    astroterm
+    lolcat
   ];
 
 }

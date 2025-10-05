@@ -14,6 +14,8 @@
 
     time.timeZone = "US/Central";
 
+    services.tailscale.enable = true;
+
     system.stateVersion = "25.05";
 
   }

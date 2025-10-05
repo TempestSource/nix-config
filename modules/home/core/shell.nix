@@ -28,7 +28,8 @@
       nixr = "sudo nixos-rebuild switch";
 
       # eza
-      l = "eza --icons  -a --group-directories-first -1";
+      ls = "eza --icons  --group-directories-first -1";
+      la = "eza --icons  -a --group-directories-first -1";
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
 

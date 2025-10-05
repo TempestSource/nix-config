@@ -13,6 +13,8 @@
             nnoremap <leader>f :Files
             nnoremap <leader>t :NERDTree
             nnoremap <leader>l :Lines
+
+            iabbr sout System.out.println("");<Esc>hhha
     '';
     plugins = with pkgs.vimPlugins; [
       nerdtree

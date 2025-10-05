@@ -6,4 +6,4 @@
     # programs.qutebrowser = {
     # 	enable = true;
     # };
-  }
+}
