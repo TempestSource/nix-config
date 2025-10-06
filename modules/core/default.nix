@@ -17,6 +17,7 @@
 
       services = {
         openssh.enable = true;
+        tailscale.enable = true;
       };
 
       environment.systemPackages = with pkgs; [
