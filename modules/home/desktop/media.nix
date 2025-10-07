@@ -4,5 +4,6 @@
     audacity
     krita
     pastel
+    kdePackages.kdenlive
   ];
 }

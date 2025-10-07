@@ -8,5 +8,6 @@
   home.packages = with pkgs; [
     glow
     w3m
+    nixos-shell
   ];
 }
