@@ -7,5 +7,6 @@
 
   home.packages = with pkgs; [
     glow
+    w3m
   ];
 }

@@ -13,6 +13,7 @@
     bc
     eza
     fzf
+    tmux
     file
   ];
 }
