@@ -13,5 +13,6 @@
     bc
     eza
     fzf
+    file
   ];
 }
