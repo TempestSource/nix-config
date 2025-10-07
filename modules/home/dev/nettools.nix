@@ -5,5 +5,6 @@
     remmina
     filezilla
     dirb
+    traceroute
   ];
 }
