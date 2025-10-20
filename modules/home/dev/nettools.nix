@@ -6,5 +6,6 @@
     filezilla
     dirb
     traceroute
+    dig
   ];
 }
