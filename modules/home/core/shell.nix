@@ -36,6 +36,8 @@
       # Programs
       v = "vim";
       vi = "vim";
+      cat = "bat";
+      p3 = "python3";
 
       # Git
       gs = "git status";
@@ -44,7 +46,6 @@
       gc = "git commit -m";
       gp = "git push";
 
-      cat = "bat";
     };
   };
 }

@@ -25,4 +25,7 @@
       fzf-vim
     ];
   };
+  programs.emacs = {
+    enable = true;
+  };
 }
