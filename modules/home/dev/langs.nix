@@ -9,5 +9,8 @@
     go
     cmake
     libtool
+
+    python3Packages.python-lsp-server
+    sqls
   ];
 }

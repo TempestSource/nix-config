@@ -2,19 +2,19 @@
   programs.vim = {
     enable = true;
     extraConfig = ''
-            set tabstop=4
-            set shiftwidth=4
-            set number relativenumber
+      set tabstop=4
+      set shiftwidth=4
+      set number relativenumber
 
-            set termguicolors
-            colorscheme catppuccin_mocha
+      set termguicolors
+      colorscheme catppuccin_mocha
 
-            let mapleader = " "
-            nnoremap <leader>f :Files
-            nnoremap <leader>t :NERDTree
-            nnoremap <leader>l :Lines
+      let mapleader = " "
+      nnoremap <leader>f :Files
+      nnoremap <leader>t :NERDTree
+      nnoremap <leader>l :Lines
 
-            iabbr sout System.out.println("");<Esc>hhha
+      iabbr sout System.out.println("");<Esc>hhha
     '';
     plugins = with pkgs.vimPlugins; [
       nerdtree
@@ -25,7 +25,13 @@
       fzf-vim
     ];
   };
-  programs.emacs = {
+  programs.zed-editor = {
     enable = true;
+    userSettings = {
+      vim_mode = true;
+      relative_line_numbers = true;
+      ui_font_size = 20;
+    };
+    extensions = [ "java" ];
   };
 }
