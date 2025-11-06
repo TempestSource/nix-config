@@ -47,6 +47,7 @@
       vim = "hx";
       cat = "bat";
       p3 = "python3";
+      cd = "z";
 
       # Git
       gs = "git status";
