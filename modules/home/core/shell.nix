@@ -50,6 +50,7 @@
       cd = "z";
 
       # Git
+      lg = "lazygit";
       gs = "git status";
       ga = "git add";
       gr = "git rm";
