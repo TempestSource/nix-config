@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.file.".p10k.zsh".source = ./p10k.zsh;
 
   programs.zsh = {
@@ -16,6 +17,13 @@
 
     initContent = ''
       source ~/.p10k.zsh
+      function y() {
+      	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+      	yazi "$@" --cwd-file="$tmp"
+      	IFS= read -r -d "" cwd < "$tmp"
+      	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+      	rm -f -- "$tmp"
+      }
     '';
 
     shellAliases = {
@@ -34,15 +42,17 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Programs
-      v = "vim";
-      vi = "vim";
+      v = "hx";
+      vi = "hx";
+      vim = "hx";
       cat = "bat";
       p3 = "python3";
 
       # Git
       gs = "git status";
       ga = "git add";
-      gr = "git remove";
+      gr = "git rm";
+      ouch = "git restore";
       gc = "git commit -m";
       gp = "git push";
 

@@ -1,37 +1,31 @@
-{ inputs, pkgs, ... }: {
-  programs.vim = {
+{ inputs, pkgs, ... }:
+{
+  home.packages = with pkgs; [
+    jdt-language-server
+  ];
+  programs.helix = {
     enable = true;
-    extraConfig = ''
-      set tabstop=4
-      set shiftwidth=4
-      set number relativenumber
-
-      set termguicolors
-      colorscheme catppuccin_mocha
-
-      let mapleader = " "
-      nnoremap <leader>f :Files
-      nnoremap <leader>t :NERDTree
-      nnoremap <leader>l :Lines
-
-      iabbr sout System.out.println("");<Esc>hhha
-    '';
-    plugins = with pkgs.vimPlugins; [
-      nerdtree
-      catppuccin-vim
-      rainbow_parentheses
-      auto-pairs
-      vim-closetag
-      fzf-vim
-    ];
-  };
-  programs.zed-editor = {
-    enable = true;
-    userSettings = {
-      vim_mode = true;
-      relative_line_numbers = true;
-      ui_font_size = 20;
+    settings = {
+      editor = {
+        line-number = "relative";
+        auto-completion = true;
+      };
     };
-    extensions = [ "java" ];
+    languages.language = [
+      {
+        name = "nix";
+        auto-format = true;
+        formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
+      }
+      {
+        name = "java";
+        scope = "source.java";
+        language-servers = [ "jdtls" ];
+        indent = {
+          tab-width = 4;
+          unit = "    ";
+        };
+      }
+    ];
   };
 }

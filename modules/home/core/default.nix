@@ -1,11 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [
     ./git.nix
     ./shell.nix
+    ./files.nix
   ];
 
   home.packages = with pkgs; [
-    ranger
     tree
     htop
     neofetch
@@ -14,6 +15,7 @@
     eza
     fzf
     tmux
+    usbutils
     file
   ];
 }

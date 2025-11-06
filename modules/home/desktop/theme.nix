@@ -6,8 +6,9 @@
     mpv.enable = true;
     spotify-player.enable = true;
     vesktop.enable = true;
-    zed.enable = true;
-    zed.accent = "lavender";
+    # zed.enable = true;
+    helix.enable = true;
+    # zed.accent = "lavender";
     # zsh-syntax-highlighting.enable = true;
   };
 }
