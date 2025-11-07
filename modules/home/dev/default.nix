@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }:
+{
   imports = [
     ./langs.nix
     ./editor.nix
@@ -9,5 +10,6 @@
     glow
     w3m
     nixos-shell
+    terraform
   ];
 }

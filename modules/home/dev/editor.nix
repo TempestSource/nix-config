@@ -9,6 +9,14 @@
       editor = {
         line-number = "relative";
         auto-completion = true;
+        statusline = {
+          left = [
+            "mode"
+            "spinner"
+            "version-control"
+            "file-name"
+          ];
+        };
       };
     };
     languages.language = [
