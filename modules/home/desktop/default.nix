@@ -1,6 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [
     ./browser.nix
+    ./mail.nix
     ./terminal.nix
     ./music.nix
     ./social.nix
